@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-<h1>Another web project</h1>
+<h1>THIS IS MY ANOTHER JSP PAGE</h1>
 </body>
 </html>
