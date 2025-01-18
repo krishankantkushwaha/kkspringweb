@@ -2,6 +2,7 @@ package com.springweb.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 @Controller
 public class WelcomeController {
@@ -13,8 +14,8 @@ public class WelcomeController {
 	}
 	
 	@RequestMapping("/ss")
-	public String meed() {
-		System.out.println("WelcomeController.meed()");
+	public String meed(@RequestParam(name="name",defaultValue="no value....")String name) {
+		System.out.println("WelcomeController.meed()"+name);
      return"index";
 	}
 	
