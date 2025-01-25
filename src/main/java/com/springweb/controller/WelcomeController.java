@@ -1,6 +1,7 @@
 package com.springweb.controller;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
@@ -15,11 +16,16 @@ public class WelcomeController {
 	
 	@RequestMapping("/ss")
 	public String meed(@RequestParam(name="name",defaultValue="no value....")String name) {
-		System.out.println("WelcomeController.meed()"+name);
+		System.out.println("WelcomeController.meed()"    +name);
      return"index";
 	}
 	
+	@RequestMapping("/get/{id}")
 	
-	
+	public String pathVar(@PathVariable(name = "id") int id) {
+		System.out.println("WelcomeController  pathVar()   " + id);
+		return "index";
+	}
+
 
 }
