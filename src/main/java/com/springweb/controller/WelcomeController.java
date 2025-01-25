@@ -4,6 +4,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 @Controller
 public class WelcomeController {
@@ -21,10 +22,10 @@ public class WelcomeController {
 	}
 	
 	@RequestMapping("/get/{id}")
-	
+	@ResponseBody
 	public String pathVar(@PathVariable(name = "id") int id) {
-		System.out.println("WelcomeController  pathVar()   " + id);
-		return "index";
+		System.out.println("WelcomeController  pathVar()...   " + id);
+		return "This is my response to client that your id is: " +id;
 	}
 
 
