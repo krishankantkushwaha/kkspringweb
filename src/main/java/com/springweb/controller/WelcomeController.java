@@ -10,23 +10,23 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class WelcomeController {
 
 	@RequestMapping("/")
+//	@ResponseBody
 	public String greet() {
 		System.out.println("WelcomeController.greet()");
-		return "welcome";
+		return "index";
 	}
-	
-	@RequestMapping("/ss")
-	public String meed(@RequestParam(name="name",defaultValue="no value....")String name) {
-		System.out.println("WelcomeController.meed()"    +name);
-     return"index";
+
+	@RequestMapping("/hello")
+	public String message(@RequestParam(name = "user", defaultValue = "Default value...") String name) {
+		System.out.println("WelcomeController.message()   " + name);
+		return "index";
 	}
-	
+
 	@RequestMapping("/get/{id}")
 	@ResponseBody
 	public String pathVar(@PathVariable(name = "id") int id) {
-		System.out.println("WelcomeController  pathVar()...   " + id);
-		return "This is my response to client that your id is: " +id;
+		System.out.println("WelcomeController  pathVar()   " + id);
+		return "This is my response to client that your id is: "+id;
 	}
-
 
 }
