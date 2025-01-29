@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.springweb.model.Employee;
 
 @Controller
-@RequestMapping("/employee")
+//@RequestMapping("/employee")
 public class EmployeeController {
 
 
@@ -26,7 +26,7 @@ public class EmployeeController {
         // Add the submitted employee to the model
        System.out.println("EmployeeController.submitForm()");
     	model.addAttribute("employee", employee);
-        return "employeeSuccess";
+        return "empsucc";
     }
 
 }

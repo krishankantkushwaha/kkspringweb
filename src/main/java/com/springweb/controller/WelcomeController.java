@@ -13,13 +13,13 @@ public class WelcomeController {
 //	@ResponseBody
 	public String greet() {
 		System.out.println("WelcomeController.greet()");
-		return "index";
+		return "NewFile";
 	}
 
 	@RequestMapping("/hello")
 	public String message(@RequestParam(name = "user", defaultValue = "Default value...") String name) {
 		System.out.println("WelcomeController.message()   " + name);
-		return "index";
+		return "NewFile";
 	}
 
 	@RequestMapping("/get/{id}")
