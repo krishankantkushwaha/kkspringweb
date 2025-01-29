@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import com.springweb.model.Employee;
 
 @Controller
-//@RequestMapping("/employee")
+@RequestMapping("/employee")
 public class EmployeeController {
 
 
