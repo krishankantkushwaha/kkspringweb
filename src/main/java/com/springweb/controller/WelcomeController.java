@@ -1,3 +1,4 @@
+
 package com.springweb.controller;
 
 import org.springframework.stereotype.Controller;
@@ -10,16 +11,16 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class WelcomeController {
 
 	@RequestMapping("/")
-//	@ResponseBody
+	@ResponseBody
 	public String greet() {
 		System.out.println("WelcomeController.greet()");
-		return "NewFile";
+		return "welcome to the spring orm form";
 	}
 
 	@RequestMapping("/hello")
 	public String message(@RequestParam(name = "user", defaultValue = "Default value...") String name) {
 		System.out.println("WelcomeController.message()   " + name);
-		return "NewFile";
+		return "index";
 	}
 
 	@RequestMapping("/get/{id}")
