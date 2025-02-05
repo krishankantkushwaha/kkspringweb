@@ -6,24 +6,24 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
-import com.springweb.dao.EmployeeDao;
+import com.springweb.dao.EmployeeDAO;
 import com.springweb.model.Employee;
 
 @Service
 @Transactional
 public class EmployeeService {
 	@Autowired
-    private final EmployeeDao employeeDao;
+    private final EmployeeDAO employeeDAO;
 
-    public EmployeeService(EmployeeDao employeeDAO) {
-        this.employeeDao = employeeDAO;
+    public EmployeeService(EmployeeDAO employeeDAO) {
+        this.employeeDAO = employeeDAO;
     }
 
     public void saveEmployee(Employee employee) {
-        employeeDao.save(employee);
+        employeeDAO.save(employee);
     }
 
     public List<Employee> getAllEmployees() {
-        return employeeDao.getAllEmployees();
+        return employeeDAO.getAllEmployees();
     }
 }

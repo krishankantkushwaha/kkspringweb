@@ -1,4 +1,3 @@
-
 package com.springweb.model;
 
 import javax.persistence.Entity;

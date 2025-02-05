@@ -11,11 +11,11 @@ import org.springframework.transaction.annotation.Transactional;
 import com.springweb.model.Employee;
 
 @Repository
-public class EmployeeDao {
+public class EmployeeDAO {
 	@Autowired
     private final HibernateTemplate hibernateTemplate;
 
-    public EmployeeDao(HibernateTemplate hibernateTemplate) {
+    public EmployeeDAO(HibernateTemplate hibernateTemplate) {
         this.hibernateTemplate = hibernateTemplate;
     }
 

@@ -1,4 +1,3 @@
-
 package com.springweb.controller;
 
 import org.springframework.stereotype.Controller;
@@ -20,7 +19,7 @@ public class WelcomeController {
 	@RequestMapping("/hello")
 	public String message(@RequestParam(name = "user", defaultValue = "Default value...") String name) {
 		System.out.println("WelcomeController.message()   " + name);
-		return "index";
+		return "NewFile";
 	}
 
 	@RequestMapping("/get/{id}")
